@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.4
+    working_directory: ~/project
+    steps:
+      - checkout
+      - run: gem update --system
+      - run: gem install bundler
+      - run: bundle install
+      - run: bundle exec jekyll build
+      - run: echo "Build finished!"

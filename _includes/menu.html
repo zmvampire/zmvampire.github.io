@@ -1,0 +1,12 @@
+<aside id="sidebar">
+    <nav id="navigation">
+      <h2>菜单</h2>
+      <ul>
+        {% for link in site.links %}
+          <li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        <li><a class="feed" href="http://eepurl.com/c_Lptf" title="Maillist">邮件</a></li>
+        <li><a class="feed" href="{{ site.url }}{{site.baseurl}}/feed.xml" title="Atom/RSS feed">订阅</a></li>
+      </ul>
+    </nav>
+</aside>

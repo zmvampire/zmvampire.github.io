@@ -1,0 +1,181 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="referrer" content="no-referrer" />
+  <meta
+    name="360-site-verification"
+    content="552987436bfdee531d580506b4a03930"
+  />
+
+  <title>
+    {% if page.title %}{{ page.title }} | {{ site.username }}{% else %}{{
+      site.title
+    }}{% endif %}
+  </title>
+  <meta
+    name="description"
+    content="{% if page.description %}{{
+      page.description | strip_html | strip_newlines | truncate: 160
+    }}{% else %}{{ site.description }}{% endif %}"
+  />
+
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@{{ site.twitter_username }}" />
+  <meta
+    name="twitter:title"
+    content="{% if page.title %}{{ page.title }} | {{
+      site.username
+    }}{% else %}{{ site.title }}{% endif %}"
+  />
+  <meta
+    name="twitter:description"
+    content="{% if page.description %}{{
+      page.description | strip_html | strip_newlines | truncate: 160
+    }}{% else %}{{ site.description }}{% endif %}"
+  />
+  {% if page.image %}
+  <meta property="twitter:image:src" content="{{ page.image }}" />
+  {% else %}
+  <meta
+    property="twitter:image:src"
+    content="{{
+      '/assets/img/blog-image.png' | prepend: site.baseurl | prepend: site.url
+    }}"
+  />
+  {% endif %}
+
+  <!-- Social: Facebook / Open Graph -->
+  <meta
+    property="og:url"
+    content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+  <meta
+    property="og:title"
+    content="{% if page.title %}{{ page.title }} | {{
+      site.username
+    }}{% else %}{{ site.title }}{% endif %}"
+  />
+  {% if page.image %}
+  <meta property="og:image" content="{{ page.image }}" />
+  {% else %}
+  <meta
+    property="og:image"
+    content="{{
+      '/assets/img/blog-image.png' | prepend: site.baseurl | prepend: site.url
+    }}"
+  />
+  {% endif %}
+  <meta
+    property="og:description"
+    content="{% if page.description %}{{
+      page.description | strip_html | strip_newlines | truncate: 160
+    }}{% else %}{{ site.description }}{% endif %}"
+  />
+  <meta property="og:site_name" content="{{ site.title }}" />
+
+  <!-- Social: Google+ / Schema.org  -->
+  <meta
+    itemprop="name"
+    content="{% if page.title %}{{ page.title }} | {{
+      site.username
+    }}{% else %}{{ site.title }}{% endif %}"
+  />
+  <meta
+    itemprop="description"
+    content="{% if page.description %}{{
+      page.description | strip_html | strip_newlines | truncate: 160
+    }}{% else %}{{ site.description }}{% endif %}"
+  />
+  <meta
+    itemprop="image"
+    content="{{
+      '/assets/img/blog-image.png' | prepend: site.baseurl | prepend: site.url
+    }}"
+  />
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="/assets/img/icons/favicon-16x16.png"
+    sizes="16x16"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    href="/assets/img/icons/favicon-32x32.png"
+    sizes="32x32"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    href="/assets/img/icons/favicon-96x96.png"
+    sizes="96x96"
+  />
+
+  <!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png" />
+
+  <!-- Windows 8 Tile Icons -->
+  <meta name="application-name" content="{{ site.title }}" />
+  <meta name="msapplication-TileColor" content="#0562DC" />
+  <meta name="msapplication-square70x70logo" content="smalltile.png" />
+  <meta name="msapplication-square150x150logo" content="mediumtile.png" />
+  <meta name="msapplication-wide310x150logo" content="widetile.png" />
+  <meta name="msapplication-square310x310logo" content="largetile.png" />
+
+  <link rel="manifest" href="/manifest.json" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
+
+  <!-- Android Lolipop Theme Color -->
+  <meta name="theme-color" content="{{ page.color }}" />
+
+  <!-- <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src *; img-src 'self' data: https://res.cloudinary.com https://www.google-analytics.com https://.snd.tc https://stats.g.doubleclick.net https://segmentfault.com; style-src 'self' 'unsafe-inline' https://c.disquscdn.com https://fonts.googleapis.com; script-src https: 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com http://fengerzh.disqus.com https://c.disquscdn.com https://disqus.com;"
+  /> -->
+
+  <!-- Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700" rel="stylesheet"> -->
+
+  <!-- Push Monkey code -->
+  <link
+    id="pm-manifest"
+    rel="manifest"
+    href="https://getpushmonkey.com/manifest-EXWHQAILS8Z6J4F57.json"
+  />
+  <script
+    id="pm-sdk"
+    src="/assets/js/config-EXWHQAILS8Z6J4F57.js?not_wp=1"
+  ></script>
+
+  <link
+    rel="stylesheet"
+    href="{{ '/assets/css/main.css' | prepend: site.baseurl }}"
+    media="(min-width: 1em)"
+  />
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="{{ site.title }}"
+    href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"
+  />
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement('script');
+      hm.src = 'https://hm.baidu.com/hm.js?bde2be9731b5da2b849099a403a68ec2';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</head>
