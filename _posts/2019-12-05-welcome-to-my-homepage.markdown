@@ -1,9 +1,12 @@
 ---
 layout: post
-title:  "Welcome to zm's Blog!"
+title:  "Welcome to zhumin's Blog!"
 date:   2019-12-05 15:18:30 +0100
 categories: jekyll update
 ---
+读万卷书,行万里路
+
+p.s.
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:
